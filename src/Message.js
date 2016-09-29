@@ -64,17 +64,14 @@ export default class Message extends React.Component {
   }
 
   renderAvatar() {
-    //if (this.props.user._id !== this.props.currentMessage.user._id) {
-      const {containerStyle, ...other} = this.props;
-      const avatarProps = {
-        ...other,
-        isSameUser: this.isSameUser,
-        isSameDay: this.isSameDay,
-      };
+    const {containerStyle, ...other} = this.props;
+    const avatarProps = {
+      ...other,
+      isSameUser: this.isSameUser,
+      isSameDay: this.isSameDay,
+    };
 
-      return <Avatar {...avatarProps}/>;
-    //}
-    //return null;
+    return <Avatar {...avatarProps}/>;
   }
 
   render() {
@@ -97,7 +94,7 @@ const styles = {
   left: StyleSheet.create({
     container: {
       flexDirection: 'row',
-      alignItems: 'flex-end',
+      alignItems: 'flex-start',
       justifyContent: 'flex-start',
       marginLeft: 8,
       marginRight: 0,
@@ -106,7 +103,7 @@ const styles = {
   right: StyleSheet.create({
     container: {
       flexDirection: 'row',
-      alignItems: 'flex-end',
+      alignItems: 'flex-start',
       justifyContent: 'flex-end',
       marginLeft: 0,
       marginRight: 8,
