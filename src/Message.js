@@ -64,7 +64,7 @@ export default class Message extends React.Component {
   }
 
   renderAvatar() {
-    if (this.props.user._id !== this.props.currentMessage.user._id) {
+    //if (this.props.user._id !== this.props.currentMessage.user._id) {
       const {containerStyle, ...other} = this.props;
       const avatarProps = {
         ...other,
@@ -73,8 +73,8 @@ export default class Message extends React.Component {
       };
 
       return <Avatar {...avatarProps}/>;
-    }
-    return null;
+    //}
+    //return null;
   }
 
   render() {
